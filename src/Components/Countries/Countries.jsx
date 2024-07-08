@@ -12,13 +12,15 @@ const Countries = () => {
     }, [])
 
     return (
-        <div className="Countries">
-            {/* <h2>Countries: {countries.length}</h2> */}
+        <div>
+            <h2 className="countryLength">Countries: {countries.length}</h2>
+            <div className="Countries">
             {
                 countries.map(country => <Country
                     key={country.cca3}
                     country={country}></Country>)
             }
+            </div>
         </div>
     );
 };
